@@ -11,8 +11,9 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 require_once __DIR__ . '/Movie.php';
 
 // istanziamento di due oggetti Movie
-$movie1 = new Movie("Il Signore degli Anelli - La Compagnia dell'Anello", "Fantasy", "2001", "USA", 4, "Peter Jackson");
-$movie2 = new Movie("Il Gladiatore", "Storico", "2000", "USA", 5, "Ridley Scott");
+$movie1 = new Movie("Il Signore degli Anelli - La Compagnia dell'Anello", "Fantasy", "2001", "USA", 4, "900 milioni", "Peter Jackson");
+$movie2 = new Movie("Il Gladiatore", "Storico", "2000", "USA", 5, "460 milioni", "Ridley Scott");
+$movie3 = new Movie("Ritorno al Futuro", "Fantascienza", "1985", "USA", 4, "390 milioni");
 ?>
 
 <!DOCTYPE html>
@@ -36,10 +37,12 @@ $movie2 = new Movie("Il Gladiatore", "Storico", "2000", "USA", 5, "Ridley Scott"
                 <li>Paese di produzione: <?php echo $movie1->country ?></li>
                 <li>Regista: <?php echo $movie1->director ?></li>
             </ul>
-            <h4><?php echo $movie1->getReview() ?></h4>
+            <h5><?php echo $movie1->get_review() ?></h5>
+            <h5><?php echo $movie1->get_takings() ?></h5>
         </div>
     </section>
     <hr>
+
     <!-- stampa in pagina del film 2 -->
     <section id="movie2">
         <h1><?php echo $movie2->title ?></h1>
@@ -50,7 +53,24 @@ $movie2 = new Movie("Il Gladiatore", "Storico", "2000", "USA", 5, "Ridley Scott"
                 <li>Paese di produzione: <?php echo $movie2->country ?></li>
                 <li>Regista: <?php echo $movie2->director ?></li>
             </ul>
-            <h4><?php echo $movie2->getReview() ?></h4>
+            <h5><?php echo $movie2->get_review() ?></h5>
+            <h5><?php echo $movie2->get_takings() ?></h5>
+        </div>
+    </section>
+    <hr>
+
+    <!-- stampa in pagina del film 2 -->
+    <section id="movie2">
+        <h1><?php echo $movie3->title ?></h1>
+        <div class="info">
+            <ul>
+                <li>Genere: <?php echo $movie3->genre ?></li>
+                <li>Anno: <?php echo $movie3->year ?></li>
+                <li>Paese di produzione: <?php echo $movie3->country ?></li>
+                <li>Regista: <?php echo $movie3->director ?></li>
+            </ul>
+            <h5><?php echo $movie3->get_review() ?></h5>
+            <h5><?php echo $movie3->get_takings() ?></h5>
         </div>
     </section>
     <hr>
