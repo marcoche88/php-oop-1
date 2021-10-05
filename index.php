@@ -60,7 +60,7 @@ $movie3 = new Movie("Ritorno al Futuro", "Fantascienza", "1985", "USA", 4, "390 
     <hr>
 
     <!-- stampa in pagina del film 3 -->
-    <section id="movie2">
+    <section id="movie3">
         <h1><?php echo $movie3->title ?></h1>
         <div class="info">
             <ul>
