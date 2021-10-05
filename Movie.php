@@ -24,6 +24,6 @@ class Movie
     //metodo della classe
     public function getReview()
     {
-        return "Il film " . $this->title . "ha ricevuto una valutazione di " . $this->vote . "/5";
+        return "Il film " . $this->title . " ha ricevuto una valutazione di " . $this->vote . "/5";
     }
 }
